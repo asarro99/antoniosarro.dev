@@ -1,14 +1,11 @@
 <script lang="ts">
 	import Logo from '$components/assets/Logo.svelte';
 
-	import { Navbar, Theme } from './components';
-	import Contact from './components/Contact.svelte';
+	import { Contact, Navbar, Theme } from './components';
 </script>
 
 <header class="header">
-	<a class="logo" href="/">
-		<Logo />
-	</a>
+	<Logo />
 	<Navbar />
 	<Theme />
 	<Contact />
@@ -21,10 +18,5 @@
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(3, 1fr);
 		gap: 1rem;
-	}
-
-	.logo {
-		@include flex;
-		grid-column: 2;
 	}
 </style>

@@ -48,6 +48,7 @@
 	.toggle {
 		border: 1px solid var(--text);
 		border-radius: 1.5rem;
+		background-color: var(--bg);
 		width: 3rem;
 		padding: 0.1rem;
 

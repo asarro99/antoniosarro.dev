@@ -1,5 +1,10 @@
 <script lang="ts">
-	const routes = [
+	interface Route {
+		label: string;
+		path: string;
+	}
+
+	const routes: Route[] = [
 		{ label: 'About', path: '/about' },
 		{ label: 'Projects', path: '/projects' },
 		{ label: 'Blog', path: '/blog' },
@@ -7,7 +12,7 @@
 	];
 </script>
 
-{#snippet route({ label, path })}
+{#snippet route({ label, path }: Route)}
 	<li>
 		<a href={path}>{label}</a>
 	</li>

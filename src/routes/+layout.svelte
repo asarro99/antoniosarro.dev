@@ -3,8 +3,10 @@
 
 	import Header from '$components/shared/header/Header.svelte';
 	import '$styles/globals.scss';
+	import Background from '$components/shared/background/Background.svelte';
 </script>
 
+<Background />
 <div class="container">
 	<Header />
 	<slot />
