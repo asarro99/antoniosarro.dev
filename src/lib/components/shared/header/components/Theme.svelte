@@ -1,6 +1,6 @@
 <script lang="ts">
-	import DarkMode from '$components/assets/symbols/DarkMode.svelte';
-	import { darkMode, toggleDarkMode, initDarkMode } from '$lib/stores/darkMode';
+	import { Moon, Sun } from '$components/assets/symbols';
+	import { darkMode, initDarkMode, toggleDarkMode } from '$lib/stores/darkMode';
 
 	$effect(() => {
 		initDarkMode();
@@ -18,51 +18,73 @@
 	/>
 	<div class="toggle">
 		<div class="icon">
-			<DarkMode />
+			{#if $darkMode}
+				<Moon />
+			{:else}
+				<Sun />
+			{/if}
 		</div>
 	</div>
 </label>
 
 <style lang="scss">
 	.theme {
-		grid-column: 2;
 		grid-row: 3;
-		align-items: center;
-
 		position: relative;
-		width: fit-content;
-		cursor: pointer;
-
 		margin: 0 auto;
+		cursor: pointer;
 		-webkit-tap-highlight-color: transparent;
+		height: fit-content;
 	}
 
 	.checkbox {
 		position: absolute;
 		opacity: 0;
-		cursor: pointer;
 		height: 0;
 		width: 0;
+		cursor: pointer;
 	}
 
 	.toggle {
+		background-color: var(--bg);
 		border: 1px solid var(--text);
 		border-radius: 1.5rem;
-		background-color: var(--bg);
-		width: 3rem;
-		padding: 0.1rem;
+		width: 2.5rem;
 
 		.icon {
 			@include flex;
 			background-color: var(--accent);
-			border-radius: 50%;
+			border-radius: 1rem;
 			width: 1.2rem;
 			height: 1.2rem;
+			padding: 0.2rem;
 			transition: transform 0.2s ease-in-out;
+
+			:global(svg) {
+				fill: var(--dm-toggle);
+				width: 1rem;
+				height: 1rem;
+				animation: swing 1s normal;
+			}
+
+			@keyframes swing {
+				0% {
+					transform: rotate(0deg);
+				}
+				30% {
+					transform: rotate(-45deg);
+				}
+				60% {
+					transform: rotate(45deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
 		}
 	}
 
 	.checkbox:checked ~ .toggle .icon {
-		transform: translateX(calc(1.2rem + 0.28rem));
+		transform: translateX(calc(1.2rem));
 	}
 </style>

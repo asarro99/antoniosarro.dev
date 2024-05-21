@@ -1,17 +1,19 @@
+import { get, writable } from 'svelte/store';
 import { THEMES } from '$types/themes';
 import type { Writable } from 'svelte/store';
-import { get, writable } from 'svelte/store';
 
 // Creating a writable store for dark mode
 export const darkMode: Writable<boolean | null> = writable(null);
+
 const YEAR = 31_536_000;
+const BODY_ATTRIBUTE = 'data-theme';
 
 // Function to initialize dark mode based on user preferences
 export const initDarkMode = () => {
 	// Checking if the body has a 'data-theme' attribute set to 'dark' or 'light' and setting the dark mode accordingly
-	if (document.body.getAttribute('data-theme') === 'dark') {
+	if (document.body.getAttribute(BODY_ATTRIBUTE) === 'dark') {
 		darkMode.set(true);
-	} else if (document.body.getAttribute('data-theme') === 'light') {
+	} else if (document.body.getAttribute(BODY_ATTRIBUTE) === 'light') {
 		darkMode.set(false);
 	}
 
@@ -43,6 +45,6 @@ export const performDarkMode = () => {
 	if (theme !== null) {
 		const cookieTheme = theme ? THEMES.DARK : THEMES.LIGHT;
 		document.cookie = `theme=${cookieTheme}; max-age=${YEAR}; sameSite=none; secure ;path=/`;
-		document.body.setAttribute('data-theme', cookieTheme);
+		document.body.setAttribute(BODY_ATTRIBUTE, cookieTheme);
 	}
 };

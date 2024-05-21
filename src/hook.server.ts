@@ -1,5 +1,5 @@
-import { THEMES } from '$types/themes';
 import type { Handle } from '@sveltejs/kit';
+import { THEMES } from '$types/themes';
 import { sequence } from '@sveltejs/kit/hooks';
 
 const getCookies: Handle = async ({ event, resolve }) => {
