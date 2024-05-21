@@ -5,10 +5,11 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:svelte/recommended',
+		'plugin:sonarjs/recommended-legacy',
 		'prettier'
 	],
 	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint'],
+	plugins: ['@typescript-eslint', 'sonarjs'],
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
@@ -29,6 +30,7 @@ module.exports = {
 		}
 	],
 	rules: {
-		'svelte/valid-compile': 'off'
+		'svelte/valid-compile': 'off',
+		'sort-imports': ['error']
 	}
 };
