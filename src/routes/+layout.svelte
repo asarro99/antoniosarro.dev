@@ -1,21 +1,27 @@
 <script lang="ts">
 	import '@fontsource-variable/manrope';
-
-	import Header from '$components/shared/header/Header.svelte';
 	import '$styles/globals.scss';
-	import Background from '$components/shared/background/Background.svelte';
+
+	import { Background, Header } from '$components/shared';
+	import { Footer } from '$components/shared/footer';
+	import { navigating } from '$app/stores';
 </script>
 
-<Background />
+<!-- TODO: Change background refresh on navigating -->
+{#if !$navigating}
+	<Background />
+{/if}
+
 <div class="container">
 	<Header />
 	<slot />
+	<Footer />
 </div>
 
 <style lang="scss">
 	.container {
 		@include flex;
-		padding: 2rem 0rem;
-		margin: 0 auto;
+		flex-direction: column;
+		padding: 1.2rem 1.55rem;
 	}
 </style>

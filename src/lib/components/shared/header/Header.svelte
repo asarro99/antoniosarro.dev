@@ -1,11 +1,12 @@
 <script lang="ts">
-	import Logo from '$components/assets/Logo.svelte';
-
 	import { Contact, Navbar, Theme } from './components';
+	import Logo from '$components/assets/Logo.svelte';
 </script>
 
 <header class="header">
-	<Logo />
+	<a class="logo" href="/">
+		<Logo />
+	</a>
 	<Navbar />
 	<Theme />
 	<Contact />
@@ -13,10 +14,19 @@
 
 <style lang="scss">
 	.header {
+		position: relative;
 		display: grid;
-		align-items: center;
-		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(3, 1fr);
-		gap: 1rem;
+		gap: 0.3rem;
+		align-items: center;
+		margin-bottom: 1rem;
+
+		.logo {
+			grid-row: 1;
+			margin: 0 auto;
+			color: var(--accent);
+			width: 10rem;
+			height: 1.6rem;
+		}
 	}
 </style>
