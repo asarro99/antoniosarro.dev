@@ -1,26 +1,8 @@
-<script lang="ts">
-</script>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
-	<path
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+	><path
 		fill="currentColor"
 		fill-rule="evenodd"
-		d="M14.968 1.966a.75.75 0 0 0-.934-.934l-12.5 3.75a.75.75 0 0 0-.18 1.355L5.952 8.99l-1.731 1.73a.75.75 0 1 0 1.06 1.061l1.731-1.73l2.852 4.595a.75.75 0 0 0 1.355-.18l3.75-12.5ZM8.101 8.96l2.159 3.48l2.417-8.056L8.1 8.96Zm3.515-5.637L3.56 5.74L7.04 7.9z"
+		d="M15 2a.8.8 0 0 0-1-1L1.5 4.8A.8.8 0 0 0 1.4 6L6 9l-1.8 1.7a.8.8 0 1 0 1 1L7 10.2l2.9 4.5a.8.8 0 0 0 1.3-.1L15 2ZM8 9l2.2 3.4 2.4-8L8 9Zm3.5-5.7-8 2.4L7 8z"
 		clip-rule="evenodd"
-	/>
-</svg>
-
-<style lang="scss">
-	svg {
-		width: 1.1rem;
-		transition: transform 0.2s ease-out;
-
-		&:hover {
-			transform: translate(2px, -2px) rotate(20deg);
-		}
-
-		path {
-			fill: var(--text);
-		}
-	}
-</style>
+	/></svg
+>
