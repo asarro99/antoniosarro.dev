@@ -3,6 +3,7 @@
 	:root {
 		--bg: #ebedda;
 		--text: #1c1c1b;
+		--alt-text: #ebedda;
 		--accent: #e15846;
 		--dm-toggle: #f4dc9f;
 	}
@@ -11,6 +12,7 @@
 [data-theme='light'] {
 	--bg: #ebedda;
 	--text: #1c1c1b;
+	--alt-text: #ebedda;
 	--accent: #e15846;
 	--dm-toggle: #f4dc9f;
 }
@@ -20,6 +22,7 @@
 	:root {
 		--bg: #1c1c1b;
 		--text: #ebedda;
+		--alt-text: #1c1c1b;
 		--accent: #e15846;
 		--dm-toggle: #f4dc9f;
 	}
@@ -28,6 +31,7 @@
 [data-theme='dark'] {
 	--bg: #1c1c1b;
 	--text: #ebedda;
+	--alt-text: #1c1c1b;
 	--accent: #e15846;
 	--dm-toggle: #f4dc9f;
 }

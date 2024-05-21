@@ -3,3 +3,17 @@
 	justify-content: $jus;
 	align-items: $ali;
 }
+
+@mixin media($query) {
+	$breakpoints: (
+		'xs': '(min-width: 500px)'
+	);
+
+	@if map-has-key($breakpoints, $query) {
+		@media screen and #{map-get($breakpoints, $query)} {
+			@content;
+		}
+	} @else {
+		@error "ERROR: No breakpoint specified for query '#{$query}'";
+	}
+}
