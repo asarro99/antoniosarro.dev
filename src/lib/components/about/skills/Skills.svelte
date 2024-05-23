@@ -31,10 +31,10 @@
 
 <style lang="scss">
 	.skills {
+		margin-bottom: 1rem;
 		.groups {
 			@include flex(center, flex-start);
 			flex-direction: column;
-			margin-bottom: 1rem;
 		}
 	}
 </style>

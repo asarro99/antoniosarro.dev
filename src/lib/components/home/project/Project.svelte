@@ -4,7 +4,7 @@
 </script>
 
 <div class="project">
-	<Title title={'RECENT BLOG POSTS'} start={false} />
+	<Title title={'RECENT PROJECTS'} start={false} />
 	<div class="items">
 		<ProjectItem />
 		<ProjectItem />

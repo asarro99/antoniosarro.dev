@@ -1,11 +1,26 @@
 <script lang="ts">
-	import { Experiences, Hero, Skills } from '$components/about';
+	import {
+		Contributions,
+		ContributionsSkeleton,
+		Experiences,
+		Hero,
+		Map,
+		Skills
+	} from '$components/about';
+
+	const { data } = $props();
 </script>
 
 <div class="about">
 	<Hero />
 	<Skills />
 	<Experiences />
+	{#await data.github}
+		<ContributionsSkeleton />
+	{:then github}
+		<Contributions data={github} />
+	{/await}
+	<Map />
 </div>
 
 <style lang="scss">

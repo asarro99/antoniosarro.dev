@@ -51,7 +51,7 @@
 			</div>
 		</div>
 
-		<img src={data.track.album.images[0].url} alt={data.track.album.name} />
+		<img src={data.track.album.images[1].url} alt={data.track.album.name} />
 	</div>
 </div>
 

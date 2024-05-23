@@ -3,7 +3,7 @@
 	import { Spotify } from '$components/shared/spotify';
 	import type { TRACK_STATUS } from '$types/spotify';
 	import type { Track } from '$types/spotify/zod/types';
-	import logo from '$lib/assets/profile_sample.png';
+	import logo from '$lib/assets/profile_sample.webp';
 
 	const {
 		spotify

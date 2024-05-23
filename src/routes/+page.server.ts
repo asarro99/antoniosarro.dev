@@ -3,6 +3,7 @@ import {
 	isRecentlyPlayedPayload,
 	isTokensPayload
 } from '$types/spotify/zod/validator';
+import type { PageServerLoad } from './$types';
 import { TRACK_STATUS } from '$types/spotify';
 import type { Track } from '$types/spotify/zod/types';
 
@@ -15,7 +16,7 @@ const SPOTIFY_TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 const SPOTIFY_NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const SPOTIFY_RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played`;
 
-export const load = async () => {
+export const load: PageServerLoad = async () => {
 	return {
 		spotify: await getSpotifyData()
 	};
