@@ -32,5 +32,8 @@ module.exports = {
 	rules: {
 		'svelte/valid-compile': 'off',
 		'sort-imports': ['error']
+	},
+	globals: {
+		App: 'writable'
 	}
 };
