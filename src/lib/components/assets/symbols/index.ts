@@ -12,3 +12,4 @@ export { default as Triangle } from './Triangle.svelte';
 export { default as Calendar } from './Calendar.svelte';
 export { default as Position } from './Position.svelte';
 export { default as Work } from './Work.svelte';
+export { default as House } from './House.svelte';
