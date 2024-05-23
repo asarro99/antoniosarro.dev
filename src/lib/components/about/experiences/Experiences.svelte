@@ -53,12 +53,15 @@
 </div>
 
 <style lang="scss">
-	.list {
-		@include flex(center, flex-start);
-		flex-direction: column;
-		gap: 2rem;
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
+	.experiences {
+		margin-bottom: 1rem;
+		.list {
+			@include flex(center, flex-start);
+			flex-direction: column;
+			gap: 2rem;
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+		}
 	}
 </style>

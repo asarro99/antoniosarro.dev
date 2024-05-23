@@ -80,6 +80,7 @@
 			border-radius: 1rem;
 			padding: 0.5rem 0.5rem;
 			min-width: 12rem;
+			box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
 			transition: all 0.3s ease-in-out;
 
 			.timestamp,
