@@ -23,9 +23,11 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--bg: #1c1c1b;
+		--bg-muted: rgba(28, 28, 27, 0.6);
 		--text: #ebedda;
 		--alt-text: #1c1c1b;
 		--accent: #e15846;
+		--accent-muted: rgba(225, 88, 70, 0.6);
 		--dm-toggle: #f4dc9f;
 		--muted-text: rgba(255, 255, 255, 0.5);
 	}
@@ -33,9 +35,11 @@
 
 [data-theme='dark'] {
 	--bg: #1c1c1b;
+	--bg-muted: rgba(28, 28, 27, 0.6);
 	--text: #ebedda;
 	--alt-text: #1c1c1b;
 	--accent: #e15846;
+	--accent-muted: rgba(225, 88, 70, 0.6);
 	--dm-toggle: #f4dc9f;
 	--muted-text: rgba(255, 255, 255, 0.5);
 }

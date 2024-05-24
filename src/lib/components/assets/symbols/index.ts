@@ -13,3 +13,6 @@ export { default as Calendar } from './Calendar.svelte';
 export { default as Position } from './Position.svelte';
 export { default as Work } from './Work.svelte';
 export { default as House } from './House.svelte';
+export { default as Search } from './Search.svelte';
+export { default as DoubleArrow } from './DoubleArrow.svelte';
+export { default as Arrow } from './Arrow.svelte';

@@ -1,19 +1,22 @@
 <script lang="ts">
 	import { Book, Eye } from '$components/assets/symbols';
+	import type { DummyBlog } from '../../../../routes/blog/+page.server';
+
+	const { data }: { data: DummyBlog } = $props();
 </script>
 
 <div class="card">
 	<div class="info">
-		<span class="title">Blog post title</span>
+		<span class="title">{data.title.slice(0, 30)}</span>
 		<span class="date">4th May 2024</span>
-		<span class="description"
-			>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Ut enim ad minim veniam</span
+		<span class="description">
+			{data.body}
+		</span>
+		<span class="category">{data.tags[0][0].toUpperCase() + data.tags[0].slice(1)} • 6 minutes</span
 		>
-		<span class="category"> Category • 6 minutes </span>
 	</div>
 	<div class="visuals">
-		<span>120</span>
+		<span>{data.views}</span>
 		<Eye />
 	</div>
 	<a class="link" href="/">
