@@ -39,12 +39,14 @@
 					}
 				);
 
-				map = L.map(mapElement!, { zoomControl: false, attributionControl: false })
-					// example to expose map events to parent components:
-					.on('popupopen', async (e) => {
-						await tick();
-						e.popup.update();
-					});
+				if (mapElement) {
+					map = L.map(mapElement, { zoomControl: false, attributionControl: false })
+						// example to expose map events to parent components:
+						.on('popupopen', async (e) => {
+							await tick();
+							e.popup.update();
+						});
+				}
 				clearInterval(loadResource);
 			}
 		}, 500);
