@@ -97,10 +97,11 @@
 <div class="container" bind:this={mapElement}>
 	{#if map}
 		{@render children()}
+	{:else}
+		<div class="container_skeleton">
+			<div class="loading"></div>
+		</div>
 	{/if}
-	<div class="container_skeleton">
-		<div class="loading"></div>
-	</div>
 </div>
 
 <style lang="scss">
