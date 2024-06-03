@@ -11,7 +11,7 @@
 		"lint": "eslint .",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"prepare": "husky"
+		"prepare": "husky || true"
 	},
 	"lint-staged": {
 		"*.{html,css,ts,svelte}": [
@@ -25,7 +25,7 @@
 		"@commitlint/cli": "^19.3.0",
 		"@commitlint/config-conventional": "^19.2.2",
 		"@fontsource-variable/manrope": "^5.0.20",
-		"@sveltejs/adapter-auto": "^3.2.0",
+		"@sveltejs/adapter-node": "^5.0.1",
 		"@sveltejs/kit": "^2.5.9",
 		"@sveltejs/vite-plugin-svelte": "^3.1.0",
 		"@types/eslint": "^8.56.10",
@@ -51,8 +51,16 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@polka/compression": "1.0.0-next.25",
+		"helmet": "^7.1.0",
 		"linkedom": "^0.18.0",
+		"polka": "^0.5.2",
 		"three": "^0.161.0",
 		"zod": "^3.23.8"
+	},
+	"packageManager": "pnpm@9.1.1",
+	"engines": {
+		"node": "~21.7.3",
+		"pnpm": "~9.1.1"
 	}
 }

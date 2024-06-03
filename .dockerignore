@@ -1,0 +1,20 @@
+# Directories
+.git
+.husky
+.svelte-kit
+build
+node_modules
+
+# Files
+.commitlintrc
+.dockerignore
+Dockerfile
+docker-compose.yml
+.env
+.env_example
+.eslintignore
+.eslintrc.cjs
+.gitignore
+.prettierignore
+.prettierrc
+README.md
