@@ -34,6 +34,18 @@
 			@include media('s') {
 				font-size: 18px;
 			}
+
+			@include media('l') {
+				font-size: 20px;
+			}
+
+			@include media('xl') {
+				font-size: 21px;
+			}
+
+			@include media('xxl') {
+				font-size: 22px;
+			}
 		}
 		hr {
 			border: none;

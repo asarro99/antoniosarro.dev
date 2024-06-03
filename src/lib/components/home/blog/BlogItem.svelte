@@ -31,7 +31,7 @@
 <style lang="scss">
 	.card {
 		position: relative;
-		border: 16px solid var(--accent);
+		border: 1.6px solid var(--accent);
 		border-radius: 16px;
 		background: var(--bg);
 		padding: 6.5px;
@@ -51,6 +51,18 @@
 				@include media('s') {
 					font-size: 16px;
 				}
+
+				@include media('l') {
+					font-size: 18px;
+				}
+
+				@include media('xl') {
+					font-size: 20px;
+				}
+
+				@include media('xxl') {
+					font-size: 22px;
+				}
 			}
 
 			.date {
@@ -61,6 +73,18 @@
 				@include media('s') {
 					font-size: 11px;
 				}
+
+				@include media('l') {
+					font-size: 13px;
+				}
+
+				@include media('xl') {
+					font-size: 15px;
+				}
+
+				@include media('xxl') {
+					font-size: 17px;
+				}
 			}
 
 			.description {
@@ -68,8 +92,25 @@
 				font-weight: 500;
 				font-size: 9.5px;
 				margin-bottom: 5.5px;
+
 				@include media('s') {
-					font-size: 11px;
+					font-size: 12px;
+				}
+
+				@include media('m') {
+					font-size: 14px;
+				}
+
+				@include media('l') {
+					font-size: 16px;
+				}
+
+				@include media('xl') {
+					font-size: 18px;
+				}
+
+				@include media('xxl') {
+					font-size: 20px;
 				}
 			}
 
@@ -80,6 +121,18 @@
 
 				@include media('s') {
 					font-size: 11px;
+				}
+
+				@include media('l') {
+					font-size: 13px;
+				}
+
+				@include media('xl') {
+					font-size: 15px;
+				}
+
+				@include media('xxl') {
+					font-size: 17px;
 				}
 			}
 		}
@@ -99,6 +152,18 @@
 				@include media('s') {
 					font-size: 14.5px;
 				}
+
+				@include media('l') {
+					font-size: 16.5px;
+				}
+
+				@include media('xl') {
+					font-size: 18.5px;
+				}
+
+				@include media('xxl') {
+					font-size: 20.5px;
+				}
 			}
 
 			.icon {
@@ -106,6 +171,18 @@
 
 				@include media('s') {
 					width: 17.5px;
+				}
+
+				@include media('l') {
+					width: 19.5px;
+				}
+
+				@include media('xl') {
+					width: 21.5px;
+				}
+
+				@include media('xxl') {
+					width: 23.5px;
 				}
 			}
 		}
@@ -119,6 +196,17 @@
 
 			@include media('s') {
 				width: 17.5px;
+			}
+
+			@include media('l') {
+				width: 19.5px;
+			}
+
+			@include media('xl') {
+				width: 21.5px;
+			}
+			@include media('xxl') {
+				width: 23.5px;
 			}
 		}
 	}

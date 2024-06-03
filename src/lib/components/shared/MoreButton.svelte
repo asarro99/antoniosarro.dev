@@ -36,13 +36,17 @@
 		}
 
 		@include media('m') {
-			width: 136px;
+			width: 96px;
 			height: 27px;
 		}
 
 		@include media('xl') {
 			width: 128px;
 			height: 32px;
+		}
+
+		@include media('xxl') {
+			width: 140px;
 		}
 
 		.text {
@@ -61,6 +65,10 @@
 			@include media('xl') {
 				font-size: 11px;
 			}
+
+			@include media('xxl') {
+				font-size: 13px;
+			}
 		}
 
 		.icon {
@@ -73,6 +81,10 @@
 
 			@include media('xl') {
 				transform: scale(0.5);
+			}
+
+			@include media('xxl') {
+				transform: scale(0.55);
 			}
 		}
 	}
