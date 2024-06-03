@@ -35,6 +35,19 @@
 		cursor: pointer;
 		-webkit-tap-highlight-color: transparent;
 		height: fit-content;
+
+		@include media('m') {
+			grid-row: 1;
+			grid-column: 10;
+		}
+
+		@include media('l') {
+			grid-column: 14;
+		}
+
+		@include media('xxl') {
+			grid-column: 16;
+		}
 	}
 
 	.checkbox {
@@ -48,22 +61,49 @@
 	.toggle {
 		background-color: var(--bg);
 		border: 1px solid var(--text);
-		border-radius: 1.5rem;
-		width: 2.5rem;
+		border-radius: 24px;
+		width: 32px;
+
+		@include media('s') {
+			width: 38px;
+		}
+
+		@include media('m') {
+			width: 32px;
+		}
+
+		@include media('xl') {
+			width: 40px;
+		}
 
 		.icon {
 			@include flex;
 			background-color: var(--accent);
-			border-radius: 1rem;
-			width: 1.2rem;
-			height: 1.2rem;
-			padding: 0.2rem;
-			transition: transform 0.2s ease-in-out;
+			border-radius: 16px;
+			width: 16px;
+			height: 16px;
+			padding: 3px;
+			transition: transform 0.3s ease-in-out;
+
+			@include media('s') {
+				width: 19px;
+				height: 19px;
+			}
+
+			@include media('m') {
+				width: 16px;
+				height: 16px;
+			}
+
+			@include media('xl') {
+				width: 19px;
+				height: 19px;
+			}
 
 			:global(svg) {
 				fill: var(--dm-toggle);
-				width: 1rem;
-				height: 1rem;
+				width: 16px;
+				height: 16px;
 				animation: swing 1s normal;
 			}
 
@@ -85,6 +125,18 @@
 	}
 
 	.checkbox:checked ~ .toggle .icon {
-		transform: translateX(calc(1.2rem));
+		transform: translateX(calc(14px));
+
+		@include media('s') {
+			transform: translateX(calc(17px));
+		}
+
+		@include media('m') {
+			transform: translateX(calc(14.5px));
+		}
+
+		@include media('xl') {
+			transform: translateX(calc(17.5px));
+		}
 	}
 </style>

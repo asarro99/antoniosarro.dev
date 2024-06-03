@@ -27,12 +27,12 @@
 	.hero {
 		@include flex;
 		flex-direction: column;
-		gap: 0.2rem;
+		gap: 3px;
 		color: var(--text);
-		margin-bottom: 1rem;
+		margin-bottom: 16px;
 
 		.title {
-			font-size: 1rem;
+			font-size: 16px;
 
 			span {
 				animation-name: wave;
@@ -73,7 +73,7 @@
 		.description {
 			@include flex;
 			flex-direction: column;
-			gap: 0.5rem;
+			gap: 8px;
 			font-size: 0.7em;
 			text-align: justify;
 

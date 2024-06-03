@@ -31,7 +31,7 @@
 
 <style lang="scss">
 	.skills {
-		margin-bottom: 1rem;
+		margin-bottom: 16px;
 		.groups {
 			@include flex(center, flex-start);
 			flex-direction: column;

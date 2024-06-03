@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { RightTop } from '$components/assets/symbols';
+	import { MoreButton } from '$components/shared';
 	import { Spotify } from '$components/shared/spotify';
 	import type { TRACK_STATUS } from '$types/spotify';
 	import type { Track } from '$types/spotify/zod/types';
@@ -16,20 +16,21 @@
 </script>
 
 <div class="hero">
-	<img class="profile-pic" src={logo} alt="profile_sample pic" />
-	<div class="side">
+	<div class="profile-pic">
+		<img class="profile-pic" src={logo} alt="profile_sample pic" />
+	</div>
+	<div class="spotify">
 		<Spotify data={spotify} />
-		<div class="description">
-			<p>
-				Hi,I'm <span>Antonio</span>, a 24-year-old software engineer based in Italy with a lifelong
-				<span>passion</span> for hardware and IT, constantly challenge myself to take that additional
-				step for self-improvement.
-			</p>
-		</div>
-		<div class="more">
-			<span class="text">More about me</span>
-			<span class="icon"> <RightTop /></span>
-		</div>
+	</div>
+	<div class="description">
+		<p>
+			Hi,I'm <span>Antonio</span>, a 24-year-old software engineer based in Italy with a lifelong
+			<span>passion</span> for hardware and IT, constantly challenge myself to take that additional step
+			for self-improvement.
+		</p>
+	</div>
+	<div class="more">
+		<MoreButton title={'More about me'} />
 	</div>
 	<hr class="line" />
 </div>
@@ -37,67 +38,234 @@
 <style lang="scss">
 	.hero {
 		position: relative;
-		width: 100%;
-		margin-bottom: 1rem;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		gap: 6.5px;
+		min-width: 100%;
+		margin-bottom: 16px;
+
+		@include media('m') {
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: 80% 20%;
+			gap: 13px;
+		}
+
+		@include media('l') {
+			grid-template-columns: repeat(15, 1fr);
+		}
+
+		@include media('xl') {
+			grid-template-columns: repeat(17, 1fr);
+			grid-template-rows: 85% 15%;
+		}
+
+		@include media('xxl') {
+			grid-template-columns: repeat(19, 1fr);
+			grid-template-rows: 85% 15%;
+		}
 
 		.profile-pic {
-			position: absolute;
-			left: -0.7rem;
-			bottom: 0.75rem;
+			position: relative;
+			grid-column: 1/4;
+			grid-row: 1/4;
+			align-items: center;
 			z-index: 1;
-			width: 9.5rem;
-			object-fit: contain;
-		}
 
-		.side {
-			@include flex(center, flex-end);
-			flex-direction: column;
-			gap: 0.4rem;
-
-			.description {
-				z-index: 2;
-				max-width: 9rem;
-				p {
-					font-size: 0.7rem;
-					text-align: end;
-					font-weight: 400;
-
-					span {
-						color: var(--accent);
-						font-weight: bold;
-					}
-				}
+			@include media('m') {
+				grid-column: 9/12;
+				grid-row: 1;
 			}
 
-			.more {
-				@include flex;
-				background: var(--accent);
-				color: var(--text);
-				width: 5rem;
-				height: 1.5rem;
-				border-radius: 1rem;
-				box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
-				z-index: 2;
+			@include media('l') {
+				grid-column: 11/14;
+			}
 
-				.text {
-					text-transform: uppercase;
-					font-size: 0.4rem;
+			@include media('xl') {
+				grid-column: 11/15;
+			}
+
+			@include media('xxl') {
+				grid-column: 13/17;
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				object-fit: contain;
+				transform: scale(1.35);
+
+				@include media('xs') {
+				}
+
+				@include media('s') {
+					top: -24px;
+				}
+
+				@include media('m') {
+					transform: scale(1.45);
+					top: 8px;
+				}
+
+				@include media('l') {
+					transform: scale(1.5);
+					top: 8px;
+				}
+
+				@include media('xl') {
+					transform: scale(1.4);
+					top: 0;
+				}
+
+				@include media('xxl') {
+					transform: scale(1.7);
+					top: -24px;
+				}
+			}
+		}
+
+		.spotify {
+			grid-column: 4/8;
+			grid-row: 1;
+
+			@include media('xs') {
+				@include flex(flex-end, center);
+			}
+
+			@include media('m') {
+				position: absolute;
+				grid-column: 9/13;
+				grid-row: 2;
+				z-index: 1;
+				align-self: flex-end;
+			}
+
+			@include media('l') {
+				grid-column: 12/16;
+			}
+
+			@include media('xxl') {
+				grid-column: 13/18;
+			}
+		}
+
+		.description {
+			grid-column: 4/8;
+			grid-row: 2;
+
+			@include media('xs') {
+				@include flex(flex-end, center);
+				max-width: 176px;
+			}
+
+			@include media('s') {
+				max-width: 256px;
+			}
+
+			@include media('m') {
+				grid-column: 2/8;
+				grid-row: 1;
+				max-width: 100%;
+			}
+
+			@include media('l') {
+				grid-column: 2/10;
+			}
+
+			@include media('xl') {
+				grid-column: 2/10;
+			}
+
+			@include media('xxl') {
+				grid-column: 2/11;
+			}
+
+			p {
+				font-size: 11px;
+				text-align: end;
+				font-weight: 400;
+
+				@include media('xs') {
+					font-size: 13px;
+				}
+
+				@include media('s') {
+					font-size: 16px;
+				}
+
+				@include media('m') {
+					font-size: 22px;
+				}
+
+				@include media('l') {
+					font-size: 28px;
+				}
+
+				@include media('xl') {
+					font-size: 32px;
+				}
+
+				@include media('xxl') {
+					font-size: 40px;
+				}
+
+				span {
+					color: var(--accent);
 					font-weight: bold;
 				}
-
-				.icon {
-					width: 1rem;
-					transform: scale(0.35);
-				}
 			}
 		}
+
+		.more {
+			grid-column: 6/8;
+			z-index: 1;
+			width: max-content;
+
+			@include media('s') {
+				width: 100%;
+				@include flex(flex-end, center);
+			}
+
+			@include media('m') {
+				grid-column: 6/8;
+				grid-row: 2;
+				align-self: flex-start;
+			}
+
+			@include media('l') {
+				grid-column: 8/10;
+			}
+
+			@include media('xl') {
+				grid-column: 7/10;
+			}
+
+			@include media('xxl') {
+				grid-column: 8/11;
+			}
+		}
+
 		.line {
-			width: 100vw;
+			width: 100%;
 			position: absolute;
-			left: -1.5rem;
-			bottom: 1rem;
+			bottom: 16px;
 			border: none;
 			border-top: 1px solid rgba($color: #ebedda, $alpha: 0.25);
+
+			@include media('m') {
+				bottom: 30px;
+			}
+
+			@include media('l') {
+				bottom: 45px;
+			}
+
+			@include media('xl') {
+				bottom: 35px;
+			}
+
+			@include media('xxl') {
+				bottom: 45px;
+			}
 		}
 	}
 </style>

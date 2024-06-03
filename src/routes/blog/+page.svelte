@@ -41,19 +41,19 @@
 	.blog {
 		@include flex;
 		flex-direction: column;
-		gap: 1.5rem;
-		margin-bottom: 1rem;
+		gap: 24px;
+		margin-bottom: 16px;
 
 		.controls {
 			@include flex;
 			flex-direction: column;
-			gap: 1rem;
+			gap: 16px;
 		}
 
 		.list {
 			@include flex;
 			flex-direction: column;
-			gap: 1rem;
+			gap: 16px;
 		}
 	}
 </style>

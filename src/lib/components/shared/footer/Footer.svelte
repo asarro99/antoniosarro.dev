@@ -25,25 +25,34 @@
 <style lang="scss">
 	footer {
 		width: 100%;
-		margin-bottom: 0.5rem;
+		margin-bottom: 8px;
 
 		.wrapper {
 			@include flex;
 			flex-direction: column;
-			gap: 0.35rem;
+			gap: 5px;
 
 			.built {
 				@include flex;
 				flex-direction: column;
+				gap: 3px;
 
 				.title {
 					@include flex;
-					gap: 0.2rem;
+					gap: 3px;
 
 					span {
-						font-size: 0.7rem;
+						font-size: 11px;
 						font-weight: bold;
 						color: var(--text);
+
+						@include media('xs') {
+							font-size: 13px;
+						}
+
+						@include media('s') {
+							font-size: 16px;
+						}
 					}
 
 					.heart {
@@ -53,9 +62,17 @@
 			}
 
 			.copyright {
-				font-size: 0.75rem;
+				font-size: 12px;
 				color: var(--text);
 				opacity: 0.8;
+
+				@include media('xs') {
+					font-size: 13px;
+				}
+
+				@include media('s') {
+					font-size: 14px;
+				}
 
 				.name {
 					font-weight: bold;

@@ -35,20 +35,41 @@
 <style lang="scss">
 	.socials {
 		@include flex;
-		gap: 1rem;
+		gap: 16px;
+
+		@include media('xs') {
+			gap: 17.5px;
+		}
+
+		@include media('s') {
+			font-size: 19px;
+		}
 
 		.item {
 			@include flex;
+			gap: 1.6px;
 			color: var(--accent);
 
 			.text {
-				font-size: 0.8rem;
+				font-size: 13px;
 				font-weight: 600;
+
+				@include media('xs') {
+					font-size: 14.5px;
+				}
+
+				@include media('s') {
+					font-size: 17.5px;
+				}
 			}
 			.icon {
-				width: 1.2rem;
-				height: 1.2rem;
-				transform: scale(0.45);
+				width: 16px;
+				height: 16px;
+				transform: scale(0.55);
+
+				@include media('s') {
+					transform: scale(0.6);
+				}
 			}
 		}
 	}

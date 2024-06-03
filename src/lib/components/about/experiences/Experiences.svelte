@@ -54,11 +54,11 @@
 
 <style lang="scss">
 	.experiences {
-		margin-bottom: 1rem;
+		margin-bottom: 16px;
 		.list {
 			@include flex(center, flex-start);
 			flex-direction: column;
-			gap: 2rem;
+			gap: 32px;
 			padding: 0;
 			margin: 0;
 			list-style-type: none;

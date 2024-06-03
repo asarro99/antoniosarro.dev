@@ -21,20 +21,28 @@
 	.title {
 		@include flex;
 		flex-direction: row;
-		gap: 0.5rem;
-		padding-bottom: 0.5rem;
+		gap: 8px;
+		padding-bottom: 8px;
 
 		h1 {
 			position: relative;
 			font-weight: 600;
-			font-size: 0.9rem;
+			font-size: 14px;
 			color: var(--accent);
 			white-space: nowrap;
+
+			@include media('s') {
+				font-size: 18px;
+			}
 		}
 		hr {
 			border: none;
 			border-top: 2px solid var(--accent);
 			width: 100%;
+
+			@include media('s') {
+				border-top: 3px solid var(--accent);
+			}
 		}
 	}
 </style>

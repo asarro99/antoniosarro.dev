@@ -19,14 +19,14 @@
 		border-bottom: 1px solid var(--accent);
 
 		input {
-			width: 12rem;
-			padding: 0.1rem;
+			width: 192px;
+			padding: 1.6px;
 			border: none;
 			outline: none;
 			background-color: transparent;
 			text-align: center;
 			font-weight: 500;
-			font-size: 0.8rem;
+			font-size: 13px;
 
 			&::placeholder {
 				color: var(--accent);
@@ -36,9 +36,9 @@
 		.icon {
 			position: absolute;
 			top: 20%;
-			right: 0.2rem;
-			width: 1rem;
-			height: 1rem;
+			right: 3px;
+			width: 16px;
+			height: 16px;
 			transform: scale(0.8);
 		}
 	}

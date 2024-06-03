@@ -18,7 +18,7 @@
 
 <style lang="scss">
 	.map {
-		margin-bottom: 1rem;
+		margin-bottom: 16px;
 		.canvas {
 			width: 100%;
 			height: 150px;

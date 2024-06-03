@@ -15,14 +15,14 @@
 	.contact {
 		@include flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: 16px;
 		position: relative;
 		width: 100%;
-		margin-bottom: 2rem;
+		margin-bottom: 32px;
 
 		.title {
 			text-align: center;
-			font-size: 0.9rem;
+			font-size: 14px;
 			color: var(--text);
 			font-weight: 300;
 		}
@@ -30,16 +30,16 @@
 		form {
 			@include flex;
 			flex-direction: column;
-			gap: 0.5rem;
+			gap: 8px;
 
 			input {
 				width: 100%;
 				background: var(--bg);
 				color: var(--text);
-				border: 0.1rem solid var(--accent);
-				border-radius: 1rem;
-				font-size: 0.7rem;
-				padding: 0.2rem 0.5rem;
+				border: 1.6px solid var(--accent);
+				border-radius: 16px;
+				font-size: 11px;
+				padding: 3px 8px;
 
 				&:focus {
 					outline: none;
@@ -49,10 +49,10 @@
 			textarea {
 				background: var(--bg);
 				color: var(--text);
-				border: 0.1rem solid var(--accent);
-				border-radius: 1rem;
-				font-size: 0.7rem;
-				padding: 0.2rem 0.5rem;
+				border: 1.6px solid var(--accent);
+				border-radius: 16px;
+				font-size: 11px;
+				padding: 3px 8px;
 				&:focus {
 					outline: none;
 				}
@@ -62,10 +62,10 @@
 				width: 100%;
 				background: var(--bg);
 				color: var(--text);
-				border: 0.1rem solid var(--accent);
-				border-radius: 1rem;
-				font-size: 0.7rem;
-				padding: 0.2rem 0.5rem;
+				border: 1.6px solid var(--accent);
+				border-radius: 16px;
+				font-size: 11px;
+				padding: 3px 8px;
 				text-transform: uppercase;
 				font-weight: 700;
 			}

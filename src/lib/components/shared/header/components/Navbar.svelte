@@ -34,20 +34,74 @@
 	.navbar {
 		grid-row: 2;
 
+		@include media('m') {
+			grid-row: 1;
+			grid-column: 4/9;
+		}
+
+		@include media('l') {
+			grid-row: 1;
+			grid-column: 5/12;
+		}
+
+		@include media('xl') {
+			grid-row: 1;
+			grid-column: 6/13;
+		}
+
+		@include media('xxl') {
+			grid-row: 1;
+			grid-column: 7/14;
+		}
+
 		ul {
-			display: flex;
-			gap: 1.1rem;
+			@include flex;
+			gap: 16px;
 			padding: 0;
 			list-style: none;
 
+			@include media('s') {
+				gap: 22.5px;
+			}
+
+			@include media('l') {
+				gap: 22.5px;
+			}
+
+			@include media('xl') {
+				gap: 32px;
+			}
+
 			li {
 				position: relative;
+
 				.item {
-					font-size: 0.9rem;
+					font-size: 13px;
 					font-weight: normal;
 					text-transform: uppercase;
 					color: var(--text);
+
+					@include media('xs') {
+						font-size: 14.5px;
+					}
+
+					@include media('s') {
+						font-size: 19px;
+					}
+
+					@include media('m') {
+						font-size: 14.5px;
+					}
+
+					@include media('l') {
+						font-size: 17.5px;
+					}
+
+					@include media('xl') {
+						font-size: 19px;
+					}
 				}
+
 				.slider {
 					position: absolute;
 					bottom: 0;

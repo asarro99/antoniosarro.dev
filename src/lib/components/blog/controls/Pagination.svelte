@@ -83,17 +83,17 @@
 <style lang="scss">
 	.pagination {
 		@include flex;
-		gap: 0.35rem;
+		gap: 5.5px;
 		width: 100%;
 
 		.page {
 			@include flex;
 			cursor: pointer;
-			width: 1.1rem;
-			height: 1.1rem;
-			padding: 0.1rem;
+			width: 17.5px;
+			height: 17.5px;
+			padding: 1.6px;
 			border: 1px solid var(--accent);
-			border-radius: 0.3rem;
+			border-radius: 5px;
 			font-weight: 600;
 			background: var(--bg);
 			color: var(--accent);
@@ -104,19 +104,19 @@
 			}
 
 			span {
-				font-size: 0.65rem;
+				font-size: 10.5px;
 			}
 		}
 
 		.icon {
 			@include flex;
 			cursor: pointer;
-			width: 1.1rem;
-			height: 1.1rem;
-			padding: 0.2rem;
+			width: 17.5px;
+			height: 17.5px;
+			padding: 3px;
 			border: 1px solid var(--accent);
 			background: var(--bg);
-			border-radius: 0.3rem;
+			border-radius: 5px;
 			color: var(--accent);
 
 			&:nth-child(-n + 2) {
@@ -126,12 +126,12 @@
 
 		.disabled {
 			@include flex;
-			width: 1.1rem;
-			height: 1.1rem;
-			padding: 0.2rem;
+			width: 17.5px;
+			height: 17.5px;
+			padding: 3px;
 			border: 1px solid var(--accent-muted);
 			background: var(--bg-muted);
-			border-radius: 0.3rem;
+			border-radius: 5px;
 			color: var(--accent-muted);
 
 			&:nth-child(-n + 2) {

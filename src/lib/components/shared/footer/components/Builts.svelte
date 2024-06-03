@@ -30,7 +30,7 @@
 <style lang="scss">
 	ul {
 		@include flex;
-		gap: 0.4rem;
+		gap: 9.5px;
 		padding: 0;
 		margin: 0;
 		list-style-type: none;
@@ -38,8 +38,16 @@
 		li {
 			.icon {
 				color: var(--accent);
-				width: 1rem;
+				width: 16px;
 				transform: scale(0.9);
+
+				@include media('xs') {
+					transform: scale(1);
+				}
+
+				@include media('s') {
+					transform: scale(1.2);
+				}
 			}
 		}
 	}

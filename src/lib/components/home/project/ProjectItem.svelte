@@ -12,8 +12,12 @@
 			labore et dolore magna aliqua. Ut enim ad minim veniam</span
 		>
 		<div class="techs">
-			<Typescript />
-			<Svelte />
+			<span class="icon">
+				<Typescript />
+			</span>
+			<span class="icon">
+				<Svelte />
+			</span>
 		</div>
 		<div class="link">
 			<Link />
@@ -31,47 +35,64 @@
 			position: relative;
 			@include flex;
 			flex-direction: column;
-			border-radius: 1rem;
-			border: 0.1rem solid var(--accent);
-			padding: 0.4rem;
+			border-radius: 16px;
+			border: 1.6px solid var(--accent);
+			padding: 6.5px;
 			color: var(--text);
 			box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
 
 			.title {
 				font-weight: 800;
 				text-transform: uppercase;
-				font-size: 0.8rem;
+				font-size: 13px;
 				color: var(--accent);
 				padding: 0;
 				margin-bottom: 0.5;
+
+				@include media('s') {
+					font-size: 16px;
+				}
 			}
 
 			.description {
 				font-weight: 400;
-				font-size: 0.6rem;
-				margin-bottom: 1.2rem;
+				font-size: 9.5px;
+				margin-bottom: 19px;
+
+				@include media('s') {
+					font-size: 11px;
+				}
 			}
 
 			.techs {
 				position: absolute;
-				bottom: 0.4rem;
-				left: 0.4rem;
+				bottom: 6.5px;
+				left: 6.5px;
 				@include flex;
-				gap: 0.2rem;
+				gap: 5px;
 				color: var(--accent);
-				:global(svg) {
-					width: 1rem;
+
+				.icon {
+					width: 16px;
 					transform: scale(0.8);
+
+					@include media('s') {
+						transform: scale(1);
+					}
 				}
 			}
 
 			.link {
 				position: absolute;
-				bottom: 0.4rem;
-				right: 0.4rem;
-				width: 1rem;
+				bottom: 6.5px;
+				right: 6.5px;
+				width: 16px;
 				color: var(--accent);
 				cursor: pointer;
+
+				@include media('s') {
+					width: 17.5px;
+				}
 			}
 		}
 	}

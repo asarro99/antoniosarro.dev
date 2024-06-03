@@ -1,4 +1,9 @@
 import {
+	SPOTIFY_CLIENT_ID,
+	SPOTIFY_CLIENT_SECRET,
+	SPOTIFY_REFRESH_TOKEN
+} from '$env/static/private';
+import {
 	isCurrentlyPlayingPayload,
 	isRecentlyPlayedPayload,
 	isTokensPayload
@@ -6,10 +11,6 @@ import {
 import type { PageServerLoad } from './$types';
 import { TRACK_STATUS } from '$types/spotify';
 import type { Track } from '$types/spotify/zod/types';
-
-const SPOTIFY_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
-const SPOTIFY_CLIENT_SECRET = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
-const SPOTIFY_REFRESH_TOKEN = import.meta.env.VITE_SPOTIFY_REFRESH_TOKEN;
 
 const SPOTIFY_REDIRECT_URI = 'http://localhost:5173/';
 const SPOTIFY_TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;

@@ -33,15 +33,15 @@
 
 <style lang="scss">
 	.contributions {
-		margin-bottom: 1rem;
+		margin-bottom: 16px;
 
 		.canvas {
 			position: relative;
 			width: 100%;
 			height: 150px;
 			background: var(--bg);
-			border-radius: 1rem;
-			border: 0.1rem solid var(--accent);
+			border-radius: 16px;
+			border: 1.6px solid var(--accent);
 			overflow: hidden;
 
 			.stats {
@@ -51,39 +51,39 @@
 
 				.yearly {
 					@include flex(space-between, center);
-					gap: 0.7rem;
-					border-left: 0.1rem solid var(--accent);
-					border-bottom: 0.1rem solid var(--accent);
-					border-bottom-left-radius: 0.5rem;
-					padding: 0.2rem 0.5rem;
+					gap: 11px;
+					border-left: 1.6px solid var(--accent);
+					border-bottom: 1.6px solid var(--accent);
+					border-bottom-left-radius: 8px;
+					padding: 3px 8px;
 
 					div {
 						@include flex(center, flex-start);
 						flex-direction: column;
 
 						.total {
-							font-size: 0.7rem;
+							font-size: 11px;
 							font-weight: bold;
 							color: var(--accent);
 						}
 
 						.label {
-							font-size: 0.6rem;
+							font-size: 9.5px;
 							font-weight: bold;
 						}
 
 						.date {
-							font-size: 0.5rem;
+							font-size: 8px;
 							color: var(--muted-text);
 						}
 					}
 				}
 
 				p {
-					margin-right: 0.1rem;
-					margin-top: 0.2rem;
+					margin-right: 1.6px;
+					margin-top: 3px;
 					text-align: right;
-					font-size: 0.6rem;
+					font-size: 9.5px;
 
 					.success {
 						color: var(--accent);

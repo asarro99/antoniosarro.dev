@@ -18,6 +18,7 @@ const albumSchema = z.object({
 	external_urls: z.object({
 		spotify: z.string()
 	}),
+	release_date: z.string(),
 	artists: z.array(artistSchema),
 	href: z.string(),
 	id: z.string(),

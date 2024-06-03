@@ -11,15 +11,15 @@
 
 <style lang="scss">
 	.contributions {
-		margin-bottom: 1rem;
+		margin-bottom: 16px;
 
 		.canvas {
 			@include flex;
 			width: 100%;
 			height: 150px;
 			background: var(--bg);
-			border: 0.1rem solid var(--accent);
-			border-radius: 1rem;
+			border: 1.6px solid var(--accent);
+			border-radius: 16px;
 
 			.loading {
 				display: inline-block;

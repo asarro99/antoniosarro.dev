@@ -33,22 +33,22 @@
 <style lang="scss">
 	.group {
 		flex-direction: column;
-		gap: 0.3rem;
-		margin-bottom: -0.5rem;
+		gap: 5px;
+		margin-bottom: -8px;
 
 		&:last-child {
 			margin-bottom: 0;
 		}
 
 		&:nth-child(odd) {
-			margin-left: 0.3rem;
+			margin-left: 5px;
 			@include flex(center, flex-start);
 			align-self: flex-start;
 
 			.title {
-				margin-left: 0.5rem;
+				margin-left: 8px;
 				.icon {
-					left: -0.5rem;
+					left: -8px;
 				}
 			}
 		}
@@ -56,14 +56,14 @@
 		&:nth-child(even) {
 			@include flex(center, flex-end);
 			align-self: flex-end;
-			margin-right: 0.3rem;
+			margin-right: 5px;
 
 			.title {
 				.text {
-					margin-right: 0.5rem;
+					margin-right: 8px;
 				}
 				.icon {
-					right: 0rem;
+					right: 0;
 					transform: rotate(80deg);
 				}
 			}
@@ -77,34 +77,34 @@
 			.text {
 				color: var(--text);
 				font-weight: 700;
-				font-size: 0.45rem;
+				font-size: 7px;
 				z-index: 2;
 			}
 
 			.icon {
 				position: absolute;
 				z-index: 1;
-				width: 1.3rem;
-				height: 1.3rem;
+				width: 21px;
+				height: 21px;
 				color: var(--accent);
 			}
 		}
 
 		.items {
 			@include flex(flex-start, center);
-			gap: 0.3rem;
+			gap: 5px;
 
 			.item {
-				border: 0.1rem solid var(--accent);
-				border-radius: 0.5rem;
-				width: 1.5rem;
-				height: 1.5rem;
+				border: 1.6px solid var(--accent);
+				border-radius: 8px;
+				width: 24px;
+				height: 24px;
 				box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
 				@include flex;
 
 				.icon {
-					width: 1rem;
-					height: 1rem;
+					width: 16px;
+					height: 16px;
 					transform: scale(0.9);
 					color: var(--accent);
 				}

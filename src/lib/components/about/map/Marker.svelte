@@ -45,8 +45,8 @@
 
 <style lang="scss">
 	.marker {
-		width: 1.3rem;
-		height: 1.3rem;
+		width: 21px;
+		height: 21px;
 		color: var(--accent);
 	}
 </style>

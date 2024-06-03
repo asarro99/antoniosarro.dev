@@ -108,8 +108,8 @@
 	.container {
 		width: 100%;
 		height: 100%;
-		border-radius: 1rem;
-		border: 0.1rem solid var(--accent);
+		border-radius: 16px;
+		border: 1.6px solid var(--accent);
 		background: var(--bg);
 	}
 
@@ -118,8 +118,8 @@
 		width: 100%;
 		height: 150px;
 		background: var(--bg);
-		border: 0.1rem solid var(--accent);
-		border-radius: 1rem;
+		border: 1.6px solid var(--accent);
+		border-radius: 16px;
 
 		.loading {
 			display: inline-block;

@@ -36,16 +36,16 @@
 <style lang="scss">
 	.position {
 		position: relative;
-		padding-left: 4rem;
+		padding-left: 64px;
 
 		&::before {
 			content: '';
 			background-color: #293138;
 			position: absolute;
 			top: 50%;
-			left: 1rem;
-			width: 1.6rem;
-			height: 1.6rem;
+			left: 16px;
+			width: 25px;
+			height: 25px;
 			border-radius: 50%;
 			transform: translateY(-50%);
 			z-index: 1;
@@ -55,10 +55,10 @@
 		&::after {
 			content: '';
 			position: absolute;
-			top: calc(50% + 1.3rem);
-			left: 1.8rem;
+			top: calc(50% + 21px);
+			left: 29px;
 			border-left: 2px dashed #293138;
-			height: calc(100% + 3rem - 2.6rem);
+			height: calc(100% + 48px - 41px);
 			transform: translateX(-50%);
 			z-index: 0;
 		}
@@ -75,11 +75,11 @@
 		.wrapper {
 			@include flex(center, flex-start);
 			flex-direction: column;
-			gap: 0.3rem;
-			border: 0.1rem solid var(--accent);
-			border-radius: 1rem;
-			padding: 0.5rem 0.5rem;
-			min-width: 12rem;
+			gap: 5px;
+			border: 1.6px solid var(--accent);
+			border-radius: 16px;
+			padding: 8px;
+			min-width: 192px;
 			box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
 			transition: all 0.3s ease-in-out;
 
@@ -87,7 +87,7 @@
 			.company,
 			.name {
 				@include flex;
-				gap: 0.4rem;
+				gap: 6.5px;
 				font-weight: 600;
 				font-size: 0.55em;
 				text-transform: uppercase;
@@ -95,8 +95,8 @@
 				transition: all 0.3s ease-in-out;
 
 				.icon {
-					width: 1rem;
-					height: 1rem;
+					width: 16px;
+					height: 16px;
 					transform: scale(0.8);
 				}
 			}
