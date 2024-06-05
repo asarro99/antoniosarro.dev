@@ -40,17 +40,14 @@
 		}
 
 		@include media('l') {
-			grid-row: 1;
 			grid-column: 5/12;
 		}
 
 		@include media('xl') {
-			grid-row: 1;
 			grid-column: 6/13;
 		}
 
 		@include media('xxl') {
-			grid-row: 1;
 			grid-column: 7/14;
 		}
 

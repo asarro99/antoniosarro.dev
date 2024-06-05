@@ -37,6 +37,22 @@
 		padding: 6.5px;
 		box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
 
+		@include media('m') {
+			grid-column: 2/12;
+		}
+
+		@include media('l') {
+			grid-column: 3/14;
+		}
+
+		@include media('xl') {
+			grid-column: 3/16;
+		}
+
+		@include media('xxl') {
+			grid-column: 3/18;
+		}
+
 		.info {
 			@include flex(center, flex-start);
 			flex-direction: column;

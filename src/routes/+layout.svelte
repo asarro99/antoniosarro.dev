@@ -2,7 +2,7 @@
 	import '@fontsource-variable/manrope';
 	import '$styles/globals.scss';
 
-	import { Background, Guide, Header } from '$components/shared';
+	import { Background, Footer, Header } from '$components/shared';
 	import { dev } from '$app/environment';
 	import { navigating } from '$app/stores';
 </script>
@@ -12,13 +12,11 @@
 	{#if !$navigating}
 		<Background />
 	{/if}
-{:else}
-	<Guide />
 {/if}
 <div class="container">
 	<Header />
 	<slot />
-	<!-- <Footer /> -->
+	<Footer />
 </div>
 
 <style lang="scss">
@@ -26,25 +24,25 @@
 		@include flex;
 		flex-direction: column;
 		max-width: 320px;
-		padding: 24px 25px;
+		padding: 25px 20px;
 
 		@include media('xs') {
-			padding: 24px 29px;
+			padding: 25px 30px;
 			max-width: 360px;
 		}
 
 		@include media('s') {
-			padding: 24px 40px;
+			padding: 25px 40px;
 			max-width: 486px;
 		}
 
 		@include media('m') {
-			padding: 24px 64px;
+			padding: 25px 65px;
 			max-width: 768px;
 		}
 
 		@include media('l') {
-			padding: 24px 96px;
+			padding: 25px 100px;
 			max-width: 1024px;
 		}
 

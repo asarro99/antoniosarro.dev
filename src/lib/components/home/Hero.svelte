@@ -42,12 +42,13 @@
 		grid-template-columns: repeat(7, 1fr);
 		gap: 6.5px;
 		min-width: 100%;
-		margin-bottom: 16px;
+		margin-bottom: 20px;
 
 		@include media('m') {
 			grid-template-columns: repeat(12, 1fr);
 			grid-template-rows: 80% 20%;
 			gap: 13px;
+			margin-bottom: 20px;
 		}
 
 		@include media('l') {
@@ -247,9 +248,15 @@
 		.line {
 			width: 100%;
 			position: absolute;
-			bottom: 16px;
-			border: none;
-			border-top: 1px solid rgba($color: #ebedda, $alpha: 0.25);
+			bottom: 17px;
+			border: 0;
+			height: 1px;
+			background-image: linear-gradient(
+				to right,
+				rgba(0, 0, 0, 0),
+				rgba($color: #ebedda, $alpha: 0.25),
+				rgba(0, 0, 0, 0)
+			);
 
 			@include media('m') {
 				bottom: 30px;

@@ -9,11 +9,11 @@
 
 <div class="title">
 	{#if !start}
-		<hr />
+		<hr class="start" />
 	{/if}
 	<h1>{title}</h1>
 	{#if start}
-		<hr />
+		<hr class="end" />
 	{/if}
 </div>
 
@@ -21,8 +21,8 @@
 	.title {
 		@include flex;
 		flex-direction: row;
-		gap: 8px;
-		padding-bottom: 8px;
+		gap: 10px;
+		padding-bottom: 10px;
 
 		h1 {
 			position: relative;
@@ -47,13 +47,22 @@
 				font-size: 22px;
 			}
 		}
-		hr {
-			border: none;
-			border-top: 2px solid var(--accent);
-			width: 100%;
 
-			@include media('s') {
-				border-top: 3px solid var(--accent);
+		hr {
+			width: 100%;
+			border: 0;
+			height: 1px;
+
+			&.start {
+				background-image: linear-gradient(to left, var(--accent), rgba(0, 0, 0, 0));
+			}
+
+			&.end {
+				background-image: linear-gradient(to right, var(--accent), rgba(0, 0, 0, 0));
+			}
+
+			@include media('xs') {
+				height: 2px;
 			}
 		}
 	}

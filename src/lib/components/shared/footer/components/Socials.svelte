@@ -42,12 +42,16 @@
 		}
 
 		@include media('s') {
-			font-size: 19px;
+			gap: 19px;
+		}
+
+		@include media('l') {
+			gap: 15px;
 		}
 
 		.item {
 			@include flex;
-			gap: 1.6px;
+			gap: 1px;
 			color: var(--accent);
 
 			.text {
@@ -60,6 +64,10 @@
 
 				@include media('s') {
 					font-size: 17.5px;
+				}
+
+				@include media('l') {
+					font-size: 15px;
 				}
 			}
 			.icon {

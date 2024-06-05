@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Blog, Hero } from '$components/home';
+	import { Blog, Hero, Project } from '$components/home';
 	import type { TRACK_STATUS } from '$types/spotify/index.js';
 	import type { Track } from '$types/spotify/zod/types.js';
 
@@ -17,4 +17,4 @@
 
 <Hero spotify={data.spotify} />
 <Blog />
-<!-- <Project /> -->
+<Project />

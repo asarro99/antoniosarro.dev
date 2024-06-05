@@ -23,17 +23,16 @@
 		grid-template-rows: repeat(3, 1fr);
 		align-items: center;
 		min-width: 100%;
-		margin-bottom: 16px;
+		margin-bottom: 20px;
 
 		@include media('s') {
-			margin-bottom: 48px;
+			margin-bottom: 50px;
 		}
 
 		@include media('m') {
 			grid-template-columns: repeat(11, 1fr);
 			grid-template-rows: repeat(1, 1fr);
 			gap: 16px;
-			margin-bottom: 48px;
 		}
 
 		@include media('l') {

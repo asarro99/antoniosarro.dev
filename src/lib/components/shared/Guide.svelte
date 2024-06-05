@@ -66,30 +66,30 @@
 		gap: 15px;
 		width: 100%;
 		height: fit-content;
-		padding: 24px 25px;
+		padding: 25px 20px;
 
 		@include media('xs') {
-			padding: 24px 29px;
+			padding: 25px 29px;
 		}
 
 		@include media('s') {
-			padding: 24px 40px;
+			padding: 25px 40px;
 		}
 
 		@include media('m') {
-			padding: 24px 64px;
+			padding: 25px 64px;
 		}
 
 		@include media('l') {
-			padding: 24px 96px;
+			padding: 25px 96px;
 		}
 
 		@include media('xl') {
-			padding: 24px 115px;
+			padding: 25px 115px;
 		}
 
 		@include media('xxl') {
-			padding: 24px 130px;
+			padding: 25px 130px;
 		}
 	}
 </style>
