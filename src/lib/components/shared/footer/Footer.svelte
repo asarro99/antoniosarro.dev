@@ -19,7 +19,6 @@
 		<div class="copyright">
 			&copy; {new Date().getFullYear()}{' '}
 			<a href="/" class="name"> Antonio Sarro </a>
-			. All rights reserved
 		</div>
 	</div>
 </footer>
@@ -27,7 +26,6 @@
 <style lang="scss">
 	footer {
 		width: 100%;
-		margin-bottom: 20px;
 
 		.wrapper {
 			@include flex;
@@ -72,7 +70,6 @@
 					span {
 						font-size: 11px;
 						font-weight: bold;
-						color: var(--text);
 
 						@include media('xs') {
 							font-size: 13px;
@@ -105,7 +102,6 @@
 
 			.copyright {
 				font-size: 12px;
-				color: var(--text);
 				opacity: 0.8;
 
 				@include media('xs') {
@@ -124,6 +120,7 @@
 
 				@include media('xl') {
 					grid-column: 2/7;
+					font-size: 16px;
 				}
 
 				@include media('xxl') {

@@ -6,7 +6,7 @@
 	<h2 class="title">Hello! I&#39;m Antonio Sarro <span>👋🏼</span></h2>
 	<p class="description">
 		<span class="paragraph">
-			I&#39;m a <span class="hightlight">{calculateAge(new Date('1999-11-16'))}</span> year old
+			I&#39;m a <span class="hightlight">{calculateAge(new Date('1999-11-16'))}</span> years old
 			software engineer based in
 			<span class="hightlight">Italy</span>. I&#39;ve always had a strong
 			<span class="hightlight">passion</span> and predisposition for hardware and IT since I was a
@@ -28,7 +28,6 @@
 		@include flex;
 		flex-direction: column;
 		gap: 3px;
-		color: var(--text);
 		margin-bottom: 16px;
 
 		.title {

@@ -31,10 +31,10 @@
 <style lang="scss">
 	.card {
 		position: relative;
-		border: 1.6px solid var(--accent);
-		border-radius: 16px;
+		border: 1px solid var(--accent);
+		border-radius: 15px;
 		background: var(--bg);
-		padding: 6.5px;
+		padding: 5px 10px;
 		box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
 
 		@include media('m') {
@@ -104,7 +104,6 @@
 			}
 
 			.description {
-				color: var(--text);
 				font-weight: 500;
 				font-size: 9.5px;
 				margin-bottom: 5.5px;
@@ -131,7 +130,6 @@
 			}
 
 			.category {
-				color: var(--text);
 				font-weight: 200;
 				font-size: 9.5px;
 
@@ -153,12 +151,10 @@
 			}
 		}
 		.visuals {
-			@include flex();
-			gap: 3px;
+			@include flex($gap: 3px);
 			position: absolute;
-			top: 8px;
-			right: 8px;
-			@include flex;
+			top: 5px;
+			right: 10px;
 			color: var(--accent);
 
 			.text {
@@ -183,7 +179,7 @@
 			}
 
 			.icon {
-				width: 16px;
+				width: 15px;
 
 				@include media('s') {
 					width: 17.5px;
@@ -204,11 +200,11 @@
 		}
 		.link {
 			position: absolute;
-			bottom: 8px;
-			right: 8px;
+			bottom: 5px;
+			right: 10px;
 			cursor: pointer;
 			color: var(--accent);
-			width: 16px;
+			width: 15px;
 
 			@include media('s') {
 				width: 17.5px;

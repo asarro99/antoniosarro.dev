@@ -1,7 +1,16 @@
-@mixin flex($jus: center, $ali: center) {
+@mixin flex($jus: center, $ali: center, $dir: row, $gap: 0px) {
 	display: flex;
 	justify-content: $jus;
 	align-items: $ali;
+	flex-direction: $dir;
+	gap: $gap;
+}
+
+@mixin grid($col: 0, $col_size: 1fr, $row: 0, $row_size: 1fr, $gap: 0px) {
+	display: grid;
+	grid-template-columns: repeat($col, $col_size);
+	grid-template-rows: repeat($row, $row_size);
+	gap: $gap;
 }
 
 @mixin media($query) {

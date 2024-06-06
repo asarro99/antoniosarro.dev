@@ -23,7 +23,6 @@
 		.title {
 			text-align: center;
 			font-size: 14px;
-			color: var(--text);
 			font-weight: 300;
 		}
 
@@ -35,7 +34,6 @@
 			input {
 				width: 100%;
 				background: var(--bg);
-				color: var(--text);
 				border: 1.6px solid var(--accent);
 				border-radius: 16px;
 				font-size: 11px;
@@ -48,7 +46,6 @@
 
 			textarea {
 				background: var(--bg);
-				color: var(--text);
 				border: 1.6px solid var(--accent);
 				border-radius: 16px;
 				font-size: 11px;
@@ -61,7 +58,6 @@
 			button {
 				width: 100%;
 				background: var(--bg);
-				color: var(--text);
 				border: 1.6px solid var(--accent);
 				border-radius: 16px;
 				font-size: 11px;

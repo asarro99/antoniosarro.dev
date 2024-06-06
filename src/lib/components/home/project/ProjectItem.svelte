@@ -37,11 +37,10 @@
 <style lang="scss">
 	.item {
 		position: relative;
+		border: 1px solid var(--accent);
 		border-radius: 16px;
-		border: 1.6px solid var(--accent);
-		padding: 6.5px;
-		color: var(--text);
 		background: var(--bg);
+		padding: 5px 10px;
 		box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
 
 		@include media('m') {
@@ -168,6 +167,7 @@
 				font-weight: 400;
 				font-size: 9.5px;
 				margin-bottom: 19px;
+				color: var(--text);
 
 				@include media('s') {
 					font-size: 12px;
@@ -183,7 +183,6 @@
 
 					p {
 						text-transform: uppercase;
-						color: var(--text);
 						font-size: 12px;
 						text-align: end;
 					}
@@ -212,8 +211,8 @@
 				position: absolute;
 				@include flex;
 				gap: 5px;
-				bottom: 6.5px;
-				left: 6.5px;
+				bottom: 5px;
+				left: 10px;
 				color: var(--accent);
 
 				@include media('m') {
@@ -237,7 +236,7 @@
 				}
 
 				.icon {
-					width: 16px;
+					width: 14px;
 
 					@include media('l') {
 						width: 17px;
@@ -255,9 +254,9 @@
 
 			.link {
 				position: absolute;
-				bottom: 6.5px;
-				right: 6.5px;
-				width: 16px;
+				bottom: 5px;
+				right: 10px;
+				width: 15px;
 				color: var(--accent);
 				cursor: pointer;
 

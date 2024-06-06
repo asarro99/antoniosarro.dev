@@ -6,8 +6,9 @@ export default defineConfig({
 	css: {
 		preprocessorOptions: {
 			scss: {
-				additionalData: `
-                @use '$styles/mixins' as *;    
+				additionalData: `  
+				@use 'sass:list';
+                @use '$styles/mixins' as *;
             `
 			}
 		}

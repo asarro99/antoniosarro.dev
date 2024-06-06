@@ -33,6 +33,11 @@
 <style lang="scss">
 	.navbar {
 		grid-row: 2;
+		grid-column: 1/8;
+
+		@include media('s') {
+			grid-column: 1/10;
+		}
 
 		@include media('m') {
 			grid-row: 1;
@@ -53,7 +58,7 @@
 
 		ul {
 			@include flex;
-			gap: 16px;
+			gap: 15px;
 			padding: 0;
 			list-style: none;
 
@@ -73,10 +78,9 @@
 				position: relative;
 
 				.item {
-					font-size: 13px;
+					font-size: 14px;
 					font-weight: normal;
 					text-transform: uppercase;
-					color: var(--text);
 
 					@include media('xs') {
 						font-size: 14.5px;
@@ -104,7 +108,12 @@
 					bottom: 0;
 					width: 50%;
 					height: 2px;
-					background: var(--accent);
+					background-image: linear-gradient(
+						to left,
+						rgba(0, 0, 0, 0),
+						var(--accent),
+						rgba(0, 0, 0, 0)
+					);
 					left: 50%;
 					transform: translate(-50%);
 				}

@@ -54,14 +54,14 @@
 
 <style lang="scss">
 	.spotify {
-		display: grid;
-		grid-template-columns: repeat(6, 1fr);
+		@include grid($col: 6);
 		grid-template-rows: 1fr;
-		padding: 4px;
-		border: 1.5px solid var(--accent);
+
 		background: var(--bg);
-		border-radius: 10px;
 		box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
+		border: 1px solid var(--accent);
+		border-radius: 10px;
+		padding: 5px;
 		max-width: 160px;
 
 		@include media('s') {
@@ -75,12 +75,12 @@
 		.image {
 			grid-column: 1/3;
 			@include flex;
-			margin-right: 4px;
+			margin-right: 5px;
 
 			img {
 				width: 45px;
 				height: 45px;
-				border-radius: 6px;
+				border-radius: 5px;
 
 				@include media('s') {
 					width: 55px;
@@ -100,11 +100,9 @@
 		}
 
 		.info {
+			@include flex(center, flex-start, $gap: 5px, $dir: column);
 			grid-column: 3/6;
-			@include flex(center, flex-start);
-			gap: 5px;
-			flex-direction: column;
-			margin-right: 4px;
+			margin-right: 5px;
 			max-height: 45px;
 			min-width: max-content;
 
@@ -166,10 +164,9 @@
 
 			.song {
 				.album {
-					font-size: 6.5px;
+					font-size: 7px;
 					font-weight: 600;
 					color: var(--muted-text);
-					margin-bottom: -1.5px;
 
 					@include media('s') {
 						font-size: 8px;
@@ -189,7 +186,6 @@
 					white-space: nowrap;
 					overflow: hidden;
 					width: 64px;
-					margin-bottom: -1.6px;
 
 					span {
 						display: inline-block;
@@ -197,7 +193,6 @@
 						animation: marquee 15s linear infinite;
 						font-weight: 700;
 						font-size: 8.8px;
-						color: var(--text);
 
 						@include media('xl') {
 							font-size: 10.5px;
@@ -212,8 +207,6 @@
 				.title-short {
 					font-weight: 700;
 					font-size: 8.8px;
-					color: var(--text);
-					margin-bottom: -1.6px;
 
 					@include media('xl') {
 						font-size: 10.5px;
@@ -227,7 +220,6 @@
 				.artist {
 					font-weight: 600;
 					font-size: 7.2px;
-					color: var(--text);
 
 					@include media('s') {
 						font-size: 10.5px;

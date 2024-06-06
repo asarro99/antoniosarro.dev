@@ -85,8 +85,6 @@
 		mouseY = 0;
 	let tick = 0;
 
-	// Check FPS
-
 	//LIMIT FPS
 	const FPS_LIMIT = 15;
 	let now;
@@ -174,14 +172,6 @@
 		};
 	});
 
-	// $effect(() => {
-	// 	if ($navigating) {
-	// 		handleSize();
-	// 		handleDots();
-	// 		console.log("RESIZE")
-	// 	}
-	// });
-
 	const handleResize = () => {
 		// Check to avoid refresh on mobile scrolling
 		let newWidth = window.innerWidth;
@@ -225,8 +215,8 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		z-index: -1000;
 		width: 100%;
 		height: fit-content;
-		z-index: -1000;
 	}
 </style>

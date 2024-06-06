@@ -3,6 +3,7 @@
 	import { Spotify } from '$components/shared/spotify';
 	import type { TRACK_STATUS } from '$types/spotify';
 	import type { Track } from '$types/spotify/zod/types';
+	import { calculateAge } from '$utils/date';
 	import logo from '$lib/assets/profile_sample.webp';
 
 	const {
@@ -24,7 +25,8 @@
 	</div>
 	<div class="description">
 		<p>
-			Hi,I'm <span>Antonio</span>, a 24-year-old software engineer based in Italy with a lifelong
+			Hi,I'm <span>Antonio</span>, a <span>{calculateAge(new Date('1999-11-16'))}</span> years old
+			software engineer based in Italy with a lifelong
 			<span>passion</span> for hardware and IT, constantly challenge myself to take that additional step
 			for self-improvement.
 		</p>

@@ -30,11 +30,16 @@
 <style lang="scss">
 	.theme {
 		grid-row: 3;
+		grid-column: 4;
 		position: relative;
 		margin: 0 auto;
 		cursor: pointer;
 		-webkit-tap-highlight-color: transparent;
-		height: fit-content;
+		width: 80%;
+
+		@include media('s') {
+			grid-column: 5;
+		}
 
 		@include media('m') {
 			grid-row: 1;
@@ -45,8 +50,12 @@
 			grid-column: 14;
 		}
 
-		@include media('xxl') {
+		@include media('xl') {
 			grid-column: 16;
+		}
+
+		@include media('xxl') {
+			grid-column: 18;
 		}
 	}
 
@@ -61,8 +70,8 @@
 	.toggle {
 		background-color: var(--bg);
 		border: 1px solid var(--text);
-		border-radius: 24px;
-		width: 32px;
+		border-radius: 15px;
+		width: 100%;
 
 		@include media('s') {
 			width: 38px;
@@ -79,9 +88,9 @@
 		.icon {
 			@include flex;
 			background-color: var(--accent);
-			border-radius: 16px;
-			width: 16px;
-			height: 16px;
+			border-radius: 15px;
+			width: 15px;
+			height: 15px;
 			padding: 3px;
 			transition: transform 0.3s ease-in-out;
 
@@ -102,8 +111,8 @@
 
 			:global(svg) {
 				fill: var(--dm-toggle);
-				width: 16px;
-				height: 16px;
+				width: 15px;
+				height: 15px;
 				animation: swing 1s normal;
 			}
 
@@ -125,7 +134,7 @@
 	}
 
 	.checkbox:checked ~ .toggle .icon {
-		transform: translateX(calc(14px));
+		transform: translateX(calc(13px));
 
 		@include media('s') {
 			transform: translateX(calc(17px));
@@ -136,7 +145,7 @@
 		}
 
 		@include media('xl') {
-			transform: translateX(calc(17.5px));
+			transform: translateX(calc(19px));
 		}
 	}
 </style>

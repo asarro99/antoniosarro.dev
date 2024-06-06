@@ -75,7 +75,6 @@
 			padding: 0;
 
 			.text {
-				color: var(--text);
 				font-weight: 700;
 				font-size: 7px;
 				z-index: 2;

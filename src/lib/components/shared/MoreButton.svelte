@@ -15,13 +15,12 @@
 
 <style lang="scss">
 	.more {
-		@include flex;
+		@include flex($gap: 5px);
 		align-self: flex-end;
 		background: var(--accent);
-		color: var(--text);
 		width: 80px;
-		height: 24px;
-		border-radius: 16px;
+		height: 25px;
+		border-radius: 15px;
 		box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
 		z-index: 2;
 
@@ -72,19 +71,14 @@
 		}
 
 		.icon {
-			width: 16px;
-			transform: scale(0.35);
+			width: 5px;
 
 			@include media('s') {
-				transform: scale(0.4);
+				width: 6px;
 			}
 
 			@include media('xl') {
-				transform: scale(0.5);
-			}
-
-			@include media('xxl') {
-				transform: scale(0.55);
+				width: 8px;
 			}
 		}
 	}

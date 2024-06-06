@@ -21,39 +21,47 @@
 
 <style lang="scss">
 	.container {
-		@include flex;
-		flex-direction: column;
-		max-width: 320px;
-		padding: 25px 20px;
-
-		@include media('xs') {
-			padding: 25px 30px;
-			max-width: 360px;
-		}
-
-		@include media('s') {
-			padding: 25px 40px;
-			max-width: 486px;
-		}
-
-		@include media('m') {
-			padding: 25px 65px;
-			max-width: 768px;
-		}
-
-		@include media('l') {
-			padding: 25px 100px;
-			max-width: 1024px;
-		}
-
-		@include media('xl') {
-			padding: 24px 115px;
-			max-width: 1280px;
-		}
-
-		@include media('xxl') {
-			padding: 24px 130px;
-			max-width: 1440px;
+		$width_padding: (
+			xxs: (
+				320px,
+				20px
+			),
+			xs: (
+				360px,
+				30px
+			),
+			s: (
+				486px,
+				40px
+			),
+			m: (
+				768px,
+				65px
+			),
+			l: (
+				1024px,
+				100px
+			),
+			xl: (
+				1280px,
+				115px
+			),
+			xxl: (
+				1440px,
+				130px
+			)
+		);
+		@each $breakpoint, $values in $width_padding {
+			@if ($breakpoint != xxs) {
+				@include media(#{$breakpoint}) {
+					max-width: list.nth($values, 1);
+					padding: 25px list.nth($values, 2);
+				}
+			} @else {
+				@include flex($dir: column);
+				max-width: list.nth($values, 1);
+				padding: 25px list.nth($values, 2);
+			}
 		}
 	}
 </style>

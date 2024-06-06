@@ -39,14 +39,9 @@
 			.icon {
 				color: var(--accent);
 				width: 16px;
-				transform: scale(0.9);
 
-				@include media('xs') {
-					transform: scale(1);
-				}
-
-				@include media('s') {
-					transform: scale(1.2);
+				@include media('xl') {
+					width: 20px;
 				}
 			}
 		}

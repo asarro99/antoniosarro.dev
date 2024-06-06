@@ -35,7 +35,8 @@
 <style lang="scss">
 	.socials {
 		@include flex;
-		gap: 16px;
+		gap: 15px;
+		color: var(--accent);
 
 		@include media('xs') {
 			gap: 17.5px;
@@ -50,12 +51,10 @@
 		}
 
 		.item {
-			@include flex;
-			gap: 1px;
-			color: var(--accent);
+			@include flex($gap: 4px);
 
 			.text {
-				font-size: 13px;
+				font-size: 12px;
 				font-weight: 600;
 
 				@include media('xs') {
@@ -69,14 +68,18 @@
 				@include media('l') {
 					font-size: 15px;
 				}
+
+				@include media('xl') {
+					font-size: 17px;
+				}
 			}
 			.icon {
-				width: 16px;
-				height: 16px;
-				transform: scale(0.55);
+				width: 6px;
+				height: 6px;
 
-				@include media('s') {
-					transform: scale(0.6);
+				@include media('xl') {
+					width: 8px;
+					height: 8px;
 				}
 			}
 		}
